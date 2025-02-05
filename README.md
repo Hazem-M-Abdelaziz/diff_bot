@@ -1,4 +1,4 @@
-# 🚗 Differential-Drive Robot with ROS2 Foxy, Gazebo, and RViz
+# 🚗 Differential-Drive Robot with ROS2 Foxy, Gazebo, and RViz 🚗
 
 This repository contains a **ROS2 Foxy** package for simulating and visualizing a differential-drive mobile robot in **Gazebo** and **RViz**. The robot's configuration and design are defined using **URDF (Unified Robot Description Format)**.
 
@@ -26,6 +26,9 @@ This repository contains a **ROS2 Foxy** package for simulating and visualizing 
 - **`worlds/`**  
   Contains the world file:
   - **`custom_world.world`**: Defines a custom environment where a robot should spawns in.
+<img src="https://github.com/user-attachments/assets/9b831404-0650-4ba3-88fb-475ef95437e7">
+
+  - **`empty_world.world`**: In case you need to test your robot in an empty world. 
 
 - **`CMakeLists.txt`** & **`package.xml`**  
   Standard files for defining the ROS2 package dependencies and build process. 🛠️
@@ -45,3 +48,31 @@ This repository contains a **ROS2 Foxy** package for simulating and visualizing 
 
 - **ROS2 Foxy** installed on your system.  
 - **Gazebo** is required for simulation.  
+
+## 🚀 How to Use
+
+1. Clone the repository inside <ROS1_WS/SRC>:  
+   ```bash
+   git clone https://github.com/Hazem-M-Abdelaziz/diff_bot.git
+   cd <ROS2_WS>
+2. Build the package:
+   ```bash
+    colcon build --symlink-install
+    source install/setup.bash
+3. Launch the simulation and visualization:
+   ```bash
+    ros2 launch diff_bot world:=./<pathFromCurrentToCustomWorldFileWithExtension>
+
+This will:
+- 📜 Load the robot model into the parameter server.
+- 🌍 Start Gazebo with the specified world.
+- 🤖 Spawn the robot in the simulation environment.
+- 📷 Publish camera sensor snaps into /camera topics.
+
+## ⌨️ Moving using teleop node
+- for this, you'll need to install teleop_twist_keyboard package to use teleop_twist_keyboard node as follows:
+   ```bash
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+## Credits 🙌
+Special thanks to [Articulated Robotics Youtube channel](https://www.youtube.com/@ArticulatedRobotics) for their valuable published tutorials.
