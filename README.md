@@ -51,7 +51,7 @@ This repository contains a **ROS2 Foxy** package for simulating and visualizing 
 
 ## 🚀 How to Use
 
-1. Clone the repository inside <ROS1_WS/SRC>:  
+1. Clone the repository inside <ROS2_WS/SRC>:  
    ```bash
    git clone https://github.com/Hazem-M-Abdelaziz/diff_bot.git
    cd <ROS2_WS>
