@@ -61,7 +61,7 @@ This repository contains a **ROS2 Foxy** package for simulating and visualizing 
     source install/setup.bash
 3. Launch the simulation and visualization:
    ```bash
-    ros2 launch diff_bot world:=./<pathFromCurrentToCustomWorldFileWithExtension>
+    ros2 launch diff_bot sim.launch.py world:=./<pathFromCurrentToCustomWorldFileWithExtension>
 
 This will:
 - 📜 Load the robot model into the parameter server.
