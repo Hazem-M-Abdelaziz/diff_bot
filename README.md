@@ -74,5 +74,13 @@ This will:
    ```bash
     ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
+## ⌨️ Visualizing in RViz2
+- For sensory data and tf visualization:
+   ```bash
+    rviz2 -d ros2_ws/src/diff_bot/config/view_bot.rviz 
+
+<img src="https://github.com/user-attachments/assets/8231d88a-77ee-46bb-91a2-a138e525bc33">
+
+
 ## Credits 🙌
 Special thanks to [Articulated Robotics Youtube channel](https://www.youtube.com/@ArticulatedRobotics) for their valuable published tutorials.
